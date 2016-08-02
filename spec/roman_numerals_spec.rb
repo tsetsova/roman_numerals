@@ -1,7 +1,38 @@
 require 'roman_numerals'
+require 'rantly/rspec_extensions'
 
 describe RomanNumerals do
   let(:roman_numerals) { described_class.new}
+
+  it "can only ever have 4 I" do
+    property_of {
+      Rantly{call([:range, 0, 100])}
+    }.check{ |integer|
+      roman = roman_numerals.arabic_to_roman(integer)
+      number_of_I = roman.scan("I").count
+      expect(number_of_I < 4).to be_truthy
+    }
+  end
+
+  it "can only ever have 1 V" do
+    property_of {
+      Rantly{call([:range, 0, 100])}
+    }.check{ |integer|
+      roman = roman_numerals.arabic_to_roman(integer)
+      number_of_V = roman.scan("V").count
+      expect(number_of_V < 2).to be_truthy
+    }
+  end
+
+  it "can never have XXXX" do
+    property_of {
+      Rantly{call([:range, 0, 100])}
+    }.check{ |integer|
+      roman = roman_numerals.arabic_to_roman(integer)
+      number_of_XXXX = roman.scan("XXXX").count
+      expect(number_of_XXXX == 0).to be_truthy
+    }
+  end
 
   it "converts 0 into an empty string" do
     expect(roman_numerals.arabic_to_roman(0)).to eq ""
