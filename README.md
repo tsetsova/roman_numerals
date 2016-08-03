@@ -52,7 +52,7 @@ Then run:
 rspec
 ```
 
-But wait, now you have *Guard* installed. You don't have to manually run the tests anymore! Make sure you've navigated in your command line to the roman_numerals directory and simply type:
+But wait, now you have **Guard** installed. You don't have to manually run the tests anymore! Make sure you've navigated in your command line to the roman_numerals directory and simply type:
 
 ```
 guard
@@ -60,14 +60,18 @@ guard
 
 Now every time you save either a test or a program file, guard will rerun your tests. 
 
-This works best if you can see your tests underneath your code in the same window. You can achieve this if you use Vim or Emacs for example. But there's also packages for Atom and Sublime. I used a package called _Terminal-Plus_ in Atom. 
+This works best if you can see your tests underneath your code in the same window. You can achieve this if you use Vim or Emacs for example. But there's also packages for Atom and Sublime. I used a package called **Terminal-Plus** in Atom. 
 
 The test is going to fail for several reasons. 
 
   * there's no class called RomanNumerals
   * there's no code implementing our expectation
 
-After you have a passing test, write another test. Don't forget to refactor after you've reached a *green* stage. Never refactor int _red_! 
+After you have a passing test, write another test. Don't forget to refactor after you've reached a **green** stage. Never refactor in **red**! This is because tests help you make sure your assumptions about the code are correct. If you refactor in red you don't know how many things your changes could potentially be breaking. 
+
+One thing I couldn't get into during the demonstration was **committing to GitHub**. It fits really well with the red-green-refactor rhythm. It's typical to commit after every passing test and also after every refactor. Only commit when your tests are green and there are no pending tests :)
+
+This way if something inexplicably breaks, you can always revert to a green state.
 
 ###Property Testing 
 
