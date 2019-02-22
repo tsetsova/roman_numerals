@@ -1,7 +1,7 @@
 # Roman Numerals
 a roman numerals demonstration for Ladies of Code
 
-##Getting started
+## Getting started
 
 You can clone down the repo with:
 
@@ -73,7 +73,7 @@ One thing I couldn't get into during the demonstration was **committing to GitHu
 
 This way if something inexplicably breaks, you can always revert to a green state.
 
-###Property Testing 
+### Property Testing 
 
 If you want to try our property testing, first you need to require the relevant library code:
 
@@ -93,7 +93,7 @@ property_of {
 
 Or check out the [Rantly documentation](https://github.com/hayeah/rantly).
 
-###Branches
+### Branches
 This project has 3 branches. 
 * One is a simple scaffold to get you started
 * final-code has the code I live coded during the Ladies of Code TDD event
